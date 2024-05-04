@@ -19,6 +19,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: newman run 'newman.postman_collection.json' --global-var ${{secrets.KEY}}  --global-var ${{secrets.TOKEN}}  --global-var ${{secrets.BOARDID}} --global-var ${{secrets.BOARDNAME}}"   --global-var ${{secrets.LISTID}}"   --global-var ${{secrets.CARDID}}"
+        run: newman run 'newman.postman_collection.json' --env-var "KEY=${{secrets.KEY}}  --env-var "TOKEN=${{secrets.TOKEN}}  --env-var "BOARDID=${{secrets.BOARDID}}   --env-var "BOARDNAME=${{secrets.BOARDNAME}   --env-var "LISTID=${{secrets.LISTID} --env-var "CARDID=${{secrets.CARDID}
 
    
