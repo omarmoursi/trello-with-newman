@@ -1,4 +1,4 @@
-name: Newman using trello
+rtname: Newman using trello
 
 # Controls when the workflow will run
 on:
@@ -23,7 +23,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run newman
-        run: newman run 'newman.postman_collection.json' -r "cli,json,junit,htmlextra" --global-var "KEY=${{env.KEY}}"  --global-var "TOKEN=${{env.TOKEN}}"  --global-var "BOARDID=${{env.BOARDID}}"   --global-var "BOARDNAME=${{env.BOARDNAME}}"   --global-var "LISTID=${{env.LISTID}}" --global-var "CARDID=${{env.CARDID}}"
+        run: newman run 'newman.postman_collection.json' -r "cli,json,junit,htmlextra" --global-var "KEY=${{secrets.KEY}}"  --global-var "TOKEN=${{secrets.TOKEN}}"  --global-var "BOARDID=${{secrets.BOARDID}}"   --global-var "BOARDNAME=${{secrets.BOARDNAME}}"   --global-var "LISTID=${{secrets.LISTID}}" --global-var "CARDID=${{secrets.CARDID}}"
  
       - uses: actions/upload-artifact@v4
         with:
