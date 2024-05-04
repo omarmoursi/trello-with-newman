@@ -19,6 +19,6 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: newman run 'Trello with Folders.newman.postman_collection.json' --global-var  "KEY=${{secrets.KEY}}"  --global-var "TOKEN=${{secrets.TOKEN}}"  --global-var "BOARDID=${{secrets.BOARDID}}"  --global-var  "BOARDNAME=${{secrets.BOARDNAME}}"   --global-var  "LISTID=${{secrets.LISTID}}"   --global-var  "CARDID=${{secrets.CARDID}}"
+        run: newman run 'newman.postman_collection.json' --global-var  "KEY=${{secrets.KEY}}"  --global-var "TOKEN=${{secrets.TOKEN}}"  --global-var "BOARDID=${{secrets.BOARDID}}"  --global-var  "BOARDNAME=${{secrets.BOARDNAME}}"   --global-var  "LISTID=${{secrets.LISTID}}"   --global-var  "CARDID=${{secrets.CARDID}}"
 
    
