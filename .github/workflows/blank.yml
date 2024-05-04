@@ -1,4 +1,4 @@
-rtname: Newman using trello
+name: Newman using trello
 
 # Controls when the workflow will run
 on:
