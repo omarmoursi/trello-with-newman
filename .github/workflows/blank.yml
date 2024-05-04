@@ -22,11 +22,11 @@ jobs:
         run:  npm install -g newman-reporter-htmlextra
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      - name: Run newman
         run: newman run 'newman.postman_collection.json' -r "cli,json,junit,htmlextra" --global-var "KEY=${{env.KEY}}"  --global-var "TOKEN=${{env.TOKEN}}"  --global-var "BOARDID=${{env.BOARDID}}"   --global-var "BOARDNAME=${{env.BOARDNAME}}"   --global-var "LISTID=${{env.LISTID}}" --global-var "CARDID=${{env.CARDID}}"
  
       - uses: actions/upload-artifact@v4
         with:
-           name: newman-report
+           name: newman-reports
            path: ./newman
    
